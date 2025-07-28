@@ -18,3 +18,41 @@ button {
   font-size: 16px;
   cursor: pointer;
 }
+
+/* ── NAVIGATION BAR STYLES ── */
+nav {
+  background: #333;           /* Dark background for the bar */
+  padding: 10px 20px;         /* Space inside the bar */
+  margin-bottom: 20px;        /* Space below the bar */
+}
+
+nav ul {
+  list-style: none;           /* Remove bullets */
+  display: flex;              /* Lay items in a row */
+  gap: 15px;                  /* Space between links */
+  margin: 0;                  /* Reset default UL margin */
+  padding: 0;                 /* Reset default UL padding */
+}
+
+nav a {
+  color: #fff;                /* White text colour */
+  text-decoration: none;      /* Remove underline */
+  font-weight: bold;          /* Emphasise links */
+}
+
+nav a:hover {
+  text-decoration: underline; /* Underline on hover */
+}
+
+
+
+/* Responsive: stack nav items on small screens */
+@media (max-width: 600px) {
+  nav ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+  body {
+    padding: 10px;
+  }
+}
