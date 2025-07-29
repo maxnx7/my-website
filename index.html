@@ -2,47 +2,165 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="A brief description of your site">
-<meta name="keywords" content="web developer, portfolio, example">
-<link rel="icon" href="images/favicon.ico">
-
-  <title>My Website</title>
-  <link 
-  rel="stylesheet" 
-  href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap">
-<style>
-  body { font-family: 'Roboto', sans-serif; }
-</style>
-
-  <link rel="stylesheet" href="styles.css">
+  <title>Defence & Co. Criminal Law Firm</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-  <nav>
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
-  </nav>
-
-<header>
-    <h1>Welcome to My Website</h1>
+  <!-- Navigation bar -->
+  <header>
+    <nav class="navbar">
+      <div class="container nav-container">
+        <a href="#home" class="logo">Defence &amp; Co.</a>
+        <ul class="nav-list">
+          <li><a href="#home"      class="nav-link active">Home</a></li>
+          <li><a href="#about"     class="nav-link">Our Firm</a></li>
+          <li><a href="#services"  class="nav-link">Practice Areas</a></li>
+          <li><a href="#stats"     class="nav-link">Case Results</a></li>
+          <li><a href="#team"      class="nav-link">Our Team</a></li>
+          <li><a href="#contact"   class="nav-link">Contact</a></li>
+        </ul>
+        <button class="menu-toggle" aria-label="Toggle menu">☰</button>
+      </div>
+    </nav>
   </header>
 
-  <main>
-    <section>
-      <p>This is a simple starter template.</p>
-      <button id="clickBtn">Click me</button>
-    </section>
-    <!-- More <section>…</section> as needed -->
-  </main>
+  <!-- Hero Section -->
+  <section id="home" class="hero">
+    <div class="container hero-content">
+      <h1>Specialists in Criminal Defence</h1>
+      <p>Fighting for your rights with integrity, compassion &amp; experience.</p>
+      <a href="#contact" class="btn">Request a Consultation</a>
+    </div>
+  </section>
 
+  <!-- About Section -->
+  <section id="about" class="about">
+    <div class="container">
+      <h2>About Defence &amp; Co.</h2>
+      <div class="about-grid">
+        <div class="about-text">
+          <p>Founded in 2005, Defence &amp; Co. has represented over <strong>1,200 clients</strong> in complex criminal cases across New South Wales. Our solicitors combine decades of courtroom experience with a dedication to client care.</p>
+          <p>We handle matters from minor offences to serious indictable charges, always ensuring our clients understand every step of the process.</p>
+        </div>
+        <div class="about-image">
+          <img src="https://via.placeholder.com/500x300?text=Courtroom" alt="Courtroom">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Practice Areas Section -->
+  <section id="services" class="services">
+    <div class="container">
+      <h2>Practice Areas</h2>
+      <div class="services-grid">
+        <div class="service-item">
+          <img src="https://via.placeholder.com/100?text=DRUG" alt="Drug Offences">
+          <h3>Drug Offences</h3>
+          <p>Possession, trafficking, manufacturing—comprehensive defence strategies.</p>
+        </div>
+        <div class="service-item">
+          <img src="https://via.placeholder.com/100?text=VIOLENCE" alt="Violent Crime">
+          <h3>Violent Crime</h3>
+          <p>Assault, domestic violence, grievous bodily harm—protecting your rights.</p>
+        </div>
+        <div class="service-item">
+          <img src="https://via.placeholder.com/100?text=THEFT" alt="Theft & Fraud">
+          <h3>Theft &amp; Fraud</h3>
+          <p>From petty theft to large-scale fraud, we provide robust representation.</p>
+        </div>
+        <div class="service-item">
+          <img src="https://via.placeholder.com/100?text=DUI" alt="Drink Driving">
+          <h3>Drink &amp; Drug Driving</h3>
+          <p>Licence suspensions, high-range readings, repeat offences—minimising penalties.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Case Results Section -->
+  <section id="stats" class="stats">
+    <div class="container">
+      <h2>Our Track Record</h2>
+      <div class="stats-grid">
+        <div class="stat-item">
+          <h3>85%</h3>
+          <p>Acquittals or charges dropped</p>
+        </div>
+        <div class="stat-item">
+          <h3>92%</h3>
+          <p>Successful licence appeals</p>
+        </div>
+        <div class="stat-item">
+          <h3>1,200+</h3>
+          <p>Clients represented</p>
+        </div>
+        <div class="stat-item">
+          <h3>18</h3>
+          <p>Years in practice</p>
+        </div>
+      </div>
+      <div class="stats-image">
+        <img src="https://via.placeholder.com/600x300?text=Bar+Chart" alt="Case Results Chart">
+      </div>
+    </div>
+  </section>
+
+  <!-- Team Section -->
+  <section id="team" class="team">
+    <div class="container">
+      <h2>Meet Our Team</h2>
+      <div class="team-grid">
+        <div class="team-member">
+          <img src="https://via.placeholder.com/200?text=Jane+Doe" alt="Jane Doe">
+          <h4>Jane Doe</h4>
+          <p>Senior Partner &amp; Barrister</p>
+        </div>
+        <div class="team-member">
+          <img src="https://via.placeholder.com/200?text=John+Smith" alt="John Smith">
+          <h4>John Smith</h4>
+          <p>Defence Solicitor</p>
+        </div>
+        <div class="team-member">
+          <img src="https://via.placeholder.com/200?text=Mary+Lee" alt="Mary Lee">
+          <h4>Mary Lee</h4>
+          <p>Solicitor</p>
+        </div>
+        <div class="team-member">
+          <img src="https://via.placeholder.com/200?text=Alan+Ng" alt="Alan Ng">
+          <h4>Alan Ng</h4>
+          <p>Associate</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="contact">
+    <div class="container">
+      <h2>Get in Touch</h2>
+      <form id="contact-form">
+        <input type="text"    id="name"    name="name"    placeholder="Your Name"    required>
+        <input type="email"   id="email"   name="email"   placeholder="Your Email"   required>
+        <textarea id="message" name="message" placeholder="Brief Details of Your Matter" rows="5" required></textarea>
+        <button type="submit" class="btn">Submit Enquiry</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Back to Top -->
+  <button id="back-to-top" title="Back to Top">↑</button>
+
+  <!-- Footer -->
   <footer>
-    <p>&copy; 2025 Max Z</p>
+    <div class="container footer-container">
+      <p>&copy; <span id="year"></span> Defence &amp; Co. Criminal Law Firm</p>
+      <button id="dark-mode-toggle" class="btn">Toggle Dark Mode</button>
+    </div>
   </footer>
 
-  <script src="script.js"></script>
+  <script src="code.js"></script>
 </body>
 </html>
