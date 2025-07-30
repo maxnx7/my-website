@@ -1,21 +1,6 @@
 // code.js
 (function() {
   document.addEventListener('DOMContentLoaded', function() {
-    // guard to disable spy while clicking
-    let manualNav = false;
-
-    // Practice‑area pop‑outs (your existing HTML strings)
-    const practiceDetails = { /* … */ };
-    document.querySelectorAll('.service-item').forEach(item => {
-      item.style.cursor = 'pointer';
-      item.addEventListener('click', () => {
-        const key = item.querySelector('h3').textContent.toLowerCase().split(' ')[0];
-        const win = window.open('', '_blank');
-        win.document.write(practiceDetails[key]);
-        win.document.close();
-      });
-    });
-
     // Mobile menu toggle
     const menuToggle = document.querySelector('.menu-toggle');
     const navList    = document.querySelector('.nav-list');
@@ -23,7 +8,8 @@
       navList.classList.toggle('active');
     });
 
-    // Smooth scroll + immediate underline on click
+    // Smooth scroll + instant underline on click
+    let manualNav = false;
     document.querySelectorAll('.nav-link').forEach(link => {
       link.addEventListener('click', function(e) {
         const href = this.getAttribute('href');
@@ -33,13 +19,10 @@
           if (target) {
             manualNav = true;
             target.scrollIntoView({ behavior: 'smooth', block: 'center' });
-            setTimeout(() => {
-              manualNav = false;
-              updateSpy();
-            }, 800);
+            setTimeout(() => { manualNav = false; updateSpy(); }, 600);
           }
         }
-        // underline instantly
+        // underline
         document.querySelectorAll('.nav-link.active').forEach(a => a.classList.remove('active'));
         this.classList.add('active');
         navList.classList.remove('active');
@@ -59,28 +42,26 @@
       updateSpy();
     });
 
-    // Scroll‑spy by viewport center
+    // Scroll‑spy
     const sections = document.querySelectorAll('section[id]');
     function updateSpy() {
       if (manualNav) return;
-      const center = window.scrollY + window.innerHeight / 2;
+      const mid = window.scrollY + window.innerHeight / 2;
       let currentId = '';
       sections.forEach(sec => {
         const top = sec.offsetTop;
         const bottom = top + sec.offsetHeight;
-        if (center >= top && center < bottom) {
-          currentId = sec.id;
-        }
+        if (mid >= top && mid < bottom) currentId = sec.id;
       });
       if (currentId) {
         document.querySelectorAll('.nav-link.active').forEach(a => a.classList.remove('active'));
-        const a = document.querySelector(`.nav-link[href="#${currentId}"]`);
-        if (a) a.classList.add('active');
+        const active = document.querySelector(`.nav-link[href="#${currentId}"]`);
+        if (active) active.classList.add('active');
       }
     }
-    updateSpy(); // initialize
+    updateSpy();
 
-    // Dark mode toggle
+    // Dark mode
     document.getElementById('dark-mode-toggle').addEventListener('click', () => {
       document.body.classList.toggle('dark-mode');
     });
